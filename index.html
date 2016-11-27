@@ -6,20 +6,26 @@
     <title></title>
   </head>
   <body>
-    <section class="input">
-      <input type="text" id="input-name" placeholder="Name">
-      <input type="text" id="input-url" placeholder="URL">
-      <input type="button" id="input-button" value="Enter">
+    <section class="container-main">
+
+      <section class="container-content">
+        <section class="container-left">
+          <input type="text" id="input-name" placeholder="Name">
+          <input type="text" id="input-url" placeholder="URL">
+          <input type="button" id="input-button" value="Enter">
+
+          <p class="links-count">Number of links: 0</p>
+          <p class="read-count">Number of read: 0</p>
+          <p class="unread-count">Number of unread: 0</p>
+        </section>
+      </section>
+
+      <section class="container-right">
+        <ul class="booked-list">
+        </ul>
+      </section>
     </section>
-    <section>
-      <ul class="booked-list">
-      </ul>
-    </section>
-    <section class="results">
-      <p class="links-count"></p>
-      <p class="read-count"></p>
-      <p class="unread-count"></p>
-    </section>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </body>

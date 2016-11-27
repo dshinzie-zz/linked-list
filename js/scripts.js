@@ -2,9 +2,10 @@ var $name = $('#input-name');
 var $url = $('#input-url');
 var $button = $('#input-button');
 
-$button.on('click', function() {
+$button.on('click', function(){
   addLink();
   countAll();
+  clearFields();
 });
 
 $('.booked-list').on('click', '.mark-read', function(){
@@ -18,7 +19,7 @@ $('.booked-list').on('click', '.remove', function(){
   countAll();
 })
 
-function addLink() {
+function addLink(){
   $('ul').append(`
   <li class="unread">
   <span class='title'>${$name.val()}</span>
@@ -29,13 +30,14 @@ function addLink() {
   `);
 }
 
-function countAll() {
+function countAll(){
+  // .text is to change values of selected elements
   $('.links-count').text('Number of links: ' + countLinks());
   $('.read-count').text('Number of read: ' + countRead());
   $('.unread-count').text('Number of unread: ' + countUnread());
 }
 
-function countLinks() {
+function countLinks(){
   return $('li').length;
 }
 
@@ -45,4 +47,11 @@ function countRead(){
 
 function countUnread(){
   return $('.unread').length;
+}
+
+function clearFields(){
+  // .val is to change the value for input fields
+  $name.val('');
+  $url.val('');
+  $name.focus();
 }
